@@ -1,10 +1,17 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../redux/slice/todos";
 
-function TextInput({ onAddText }) {
+function TextInput() {
   const [inputValue, setInputValue] = useState("");
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setInputValue(e.target.value);
+  };
+
+  const onAddText = (text) => {
+    dispatch(addTodo(text));
   };
 
   const handleSubmit = (e) => {
