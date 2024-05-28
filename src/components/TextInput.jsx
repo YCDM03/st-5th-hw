@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../redux/slice/todos";
+import { addTodo } from "../redux/slices/todos";
 
 function TextInput() {
   const [inputValue, setInputValue] = useState("");
